@@ -1,12 +1,59 @@
 body {
   background: green;
+  box-sizing: border-box;
 }
 
 .card {
+  text-align: center;
+  background: honeydew;
+  margin: auto;
+  height: 400px;
+  width: 250px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
 }
-.spade {
+.card:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 80px;
 }
-.heart {
+.card:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 80px;
 }
-.diamond {
+
+.number {
+  font-size: 100px;
+  font-weight: 400px;
+  color: black;
+}
+
+.spade,
+.spade:before,
+.spade:after {
+  content: "\2660";
+  color: black;
+}
+.heart,
+.heart:before,
+.heart:after {
+  content: "\2665";
+  color: red;
+}
+.diamond,
+.diamond:before,
+.diamond:after {
+  content: "\2666";
+  color: red;
+}
+.club,
+.club:before,
+.club:after {
+  content: "\2663";
+  color: black;
 }
